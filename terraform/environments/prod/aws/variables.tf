@@ -1,3 +1,5 @@
+# all variable DECLARATION here BEFORE setting value in the terraform.tfvars
+
 variable "region" {
   default = "us-east-1"
 }
