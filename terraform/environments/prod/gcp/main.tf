@@ -8,11 +8,13 @@ module "gcp_api" {
 module "gcp_network" {
   source = "../modules/gcp/network"
   gcp_region = var.gcp_region
+  name = var.gcp_vpc_name
 }
 
 # The GKE cluster module
 module "gke_cluster" {
   source = "../modules/gcp/gke"
+  name = var.gke_cluster_name
   gke_cluster_location = var.gcp_region
   gke_cluster_network_name = module.gcp_network.network_name
   gke_cluster_subenetwork_name = module.gcp_network.subenetwork_name

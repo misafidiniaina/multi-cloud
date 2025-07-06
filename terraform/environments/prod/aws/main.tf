@@ -1,8 +1,8 @@
 module "vpc" {
   source         = "../../../modules/aws/network"
-  vpc_cidr       = var.vpc_cidr
-  public_subnets = var.public_subnets
-  azs            = var.azs
+  aws_vpc_cidr       = var.aws_vpc_cidr
+  aws_public_subnets = var.aws_public_subnets
+  aws_azs            = var.aws_azs
 }
 
 module "iam" {
@@ -11,7 +11,7 @@ module "iam" {
 
 module "eks" {
   source           = "../../../modules/aws/eks"
-  cluster_name     = var.cluster_name
-  subnet_ids       = module.vpc.subnet_ids
-  cluster_role_arn = module.iam.cluster_role_arn
+  aws_cluster_name     = var.aws_cluster_name
+  aws_subnet_ids       = module.vpc.subnet_ids
+  aws_cluster_role_arn = module.iam.cluster_role_arn
 }
