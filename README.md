@@ -1,21 +1,21 @@
-# ☁️ Multi-Cloud Kubernetes Infrastructure with Terraform
+# Multi-Cloud Kubernetes Infrastructure with Terraform
 
 This project implements a **multi-cloud, multi-cluster Kubernetes infrastructure** across **Google Cloud Platform (GCP)**, **Amazon Web Services (AWS)**, and **Cloudflare** using **Terraform** and optionally **Terragrunt**.
 
 ---
 
-## 🌍 Overview
+## Overview
 
 This infrastructure enables:
 
-- ✅ **Avoidance of vendor lock-in**
-- 🔁 **High availability and geographic redundancy**
-- 🔒 **Data security through cross-cloud replication**
-- ⚖️ **Geo-aware traffic routing using Cloudflare DNS and Load Balancing**
+-  **Avoidance of vendor lock-in**
+-  **High availability and geographic redundancy**
+-  **Data security through cross-cloud replication**
+-  **Geo-aware traffic routing using Cloudflare DNS and Load Balancing**
 
 ---
 
-## 🗺️ Architecture Diagram
+## Architecture Diagram
 
                     +----------------------+
                     |     Cloudflare DNS   |
@@ -35,9 +35,9 @@ This infrastructure enables:
 
 ---
 
-## 🧱 Components
+## Components
 
-### ☁️ Cloud Providers
+### Cloud Providers
 
 - **GCP**:
 
@@ -55,7 +55,7 @@ This infrastructure enables:
   - DNS resolution
   - Load balancing across public IPs of GCP and AWS clusters
 
-### 🛡️ Database
+### Database
 
 PostgreSQL databases are deployed in both GCP and AWS and configured for **bidirectional replication** to ensure:
 
@@ -65,7 +65,7 @@ PostgreSQL databases are deployed in both GCP and AWS and configured for **bidir
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 .
@@ -92,9 +92,9 @@ PostgreSQL databases are deployed in both GCP and AWS and configured for **bidir
 
 ---
 
-## 📦 How to Use
+## How to Use
 
-### 🔹 Run a Specific Cloud & Environment
+### Run a Specific Cloud & Environment
 
 You can apply infrastructure only for a specific cloud provider (e.g., GCP or AWS):
 
