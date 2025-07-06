@@ -8,10 +8,10 @@ This project implements a **multi-cloud, multi-cluster Kubernetes infrastructure
 
 This infrastructure enables:
 
--  **Avoidance of vendor lock-in**
--  **High availability and geographic redundancy**
--  **Data security through cross-cloud replication**
--  **Geo-aware traffic routing using Cloudflare DNS and Load Balancing**
+- **Avoidance of vendor lock-in**
+- **High availability and geographic redundancy**
+- **Data security through cross-cloud replication**
+- **Geo-aware traffic routing using Cloudflare DNS and Load Balancing**
 
 ---
 
@@ -105,7 +105,8 @@ terraform validate
 terraform apply
 ```
 
-Repeat for envs/prod/aws, envs/dev/gcp, etc.
+Repeat for envs/prod/aws, envs/dev/gcp, etc.  
+  
 To apply everything across providers and environments:
 
 ```bash
