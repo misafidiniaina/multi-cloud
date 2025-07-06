@@ -33,8 +33,6 @@ This infrastructure enables:
 
                 <==== Data replication between DBs ====>
 
-
-
 ---
 
 ## 🧱 Components
@@ -42,11 +40,13 @@ This infrastructure enables:
 ### ☁️ Cloud Providers
 
 - **GCP**:
+
   - VPC
   - GKE Cluster (Kubernetes)
   - PostgreSQL Database
 
 - **AWS**:
+
   - VPC
   - EKS Cluster (Kubernetes)
   - PostgreSQL Database
@@ -67,6 +67,7 @@ PostgreSQL databases are deployed in both GCP and AWS and configured for **bidir
 
 ## 📁 Project Structure
 
+```bash
 .
 ├── modules/ # Reusable cloud modules (network, kubernetes, db, etc.)
 │ ├── aws/
@@ -87,7 +88,7 @@ PostgreSQL databases are deployed in both GCP and AWS and configured for **bidir
 ├── gcp.hcl
 └── prod.hcl
 
-
+```
 
 ---
 
@@ -103,6 +104,7 @@ terraform init
 terraform validate
 terraform apply
 ```
+
 Repeat for envs/prod/aws, envs/dev/gcp, etc.
 To apply everything across providers and environments:
 
@@ -110,7 +112,9 @@ To apply everything across providers and environments:
 cd terragrunt/
 terragrunt run-all apply --terragrunt-config prod.hcl
 ```
+
 Or run per provider:
+
 ```bash
 terragrunt run-all apply --terragrunt-config aws.hcl
 terragrunt run-all apply --terragrunt-config gcp.hcl
